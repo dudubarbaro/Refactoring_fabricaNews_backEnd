@@ -12,6 +12,7 @@ from core.views import (
 )
 from user.views import (
     UserProjectFollowViewSet,
+    MyTokenObtainPairView,
 )
 
 from project.views import (
@@ -21,6 +22,10 @@ from feeling.views import (
     FeelingViewSet,
     NewsFeelViewSet,
 )
+from rest_framework_simplejwt.views import (
+    TokenRefreshView,
+)
+
 router = DefaultRouter()
 router.register(r"newsfeel", NewsFeelViewSet)
 router.register(r"categories", CategoryViewSet)
@@ -34,5 +39,7 @@ router.register(r"comments", CommentsViewSet)
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path("login/", MyTokenObtainPairView.as_view(), name="token_obtain_pair"),
+    path('login/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     path("", include(router.urls)),
 ]
