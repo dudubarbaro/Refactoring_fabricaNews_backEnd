@@ -1,6 +1,6 @@
 from rest_framework.viewsets import ModelViewSet
-from core.models import Feeling
-from core.serializers import FeelingSerializer
+from feeling.models import Feeling
+from feeling.serializers import FeelingSerializer
 
 
 class FeelingViewSet(ModelViewSet):

@@ -1,6 +1,6 @@
 from django.db import models
-from .user import User
-from .news import News
+from user.models.user import User
+from project.models.news import News
 
 
 class Favorites(models.Model):

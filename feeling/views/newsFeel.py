@@ -1,7 +1,7 @@
 from rest_framework.viewsets import ModelViewSet
 
-from core.models import NewsFeel
-from core.serializers import NewsFeelSerializer
+from feeling.models import NewsFeel
+from feeling.serializers import NewsFeelSerializer
 
 
 class NewsFeelViewSet(ModelViewSet):

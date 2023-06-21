@@ -1,8 +1,8 @@
 from rest_framework.serializers import ModelSerializer
-from core.models import Feeling
+from project.models import News
 
 
-class FeelingSerializer(ModelSerializer):
+class NewsSerializer(ModelSerializer):
     class Meta:
-        model = Feeling
+        model = News
         fields = "__all__"

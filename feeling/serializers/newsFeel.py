@@ -1,5 +1,5 @@
 from rest_framework.serializers import ModelSerializer
-from core.models import NewsFeel
+from feeling.models import NewsFeel
 
 
 class NewsFeelSerializer(ModelSerializer):

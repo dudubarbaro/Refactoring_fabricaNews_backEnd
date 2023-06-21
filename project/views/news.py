@@ -1,6 +1,6 @@
 from rest_framework.viewsets import ModelViewSet
-from core.models import News
-from core.serializers import NewsSerializer
+from project.models import News
+from project.serializers import NewsSerializer
 
 
 class NewsViewSet(ModelViewSet):
